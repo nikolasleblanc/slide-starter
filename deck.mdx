@@ -1,0 +1,30 @@
+# This is the title of my deck
+---
+# About Me
+---
+```jsx
+<CodeSnippet />
+```
+---
+import Demo from './components/Demo'
+
+<Demo />
+---
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+<CodeSurfer
+  title="Some Title"
+  code={require("!raw-loader!./my-snippet.js")}
+  lang="javascript"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { notes: "No highlight"},
+    { lines: [1], notes: "Highlight the first line" },
+    { range: [3, 5], notes: 'Highlight a range' },
+    { lines: [5], notes: "Highlight the 5th line"},
+    { tokens: { 5: [3, 4, 5] }, notes: "Highlight a part of a line" }
+  ]}
+/>
+---
+# The end
